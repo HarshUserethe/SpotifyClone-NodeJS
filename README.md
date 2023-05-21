@@ -13,4 +13,7 @@ I'm incredibly proud of this project, as it not only demonstrates my proficiency
 
 Feel free to explore my Spotify clone and discover the exciting world of music in a brand new way. Join me on this journey as we redefine the future of music streaming!
 
+Live Demo:
+https://spotifyclone-3s1m.onrender.com
+
 #SpotifyClone #WebDevelopment #MusicStreaming #NodeJS #MongoDB
