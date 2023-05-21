@@ -211,6 +211,7 @@
   }
   #errMessage {
     font-size: 4vw !important;
+    bottom: 5vh !important;
   }
   #lab {
     display: initial;
@@ -329,17 +330,23 @@
     font-size: 3.5vw !important;
   }
   .song-card {
-    width: 100vw !important;
+    /* width: 100vw !important;
     left: -11vw;
     position: absolute;
+    top: 0vh; */
+    width: 93vw !important;
+    left: -7vw;
+    height: 28vh !important;
+    position: absolute;
     top: 0vh;
+  
   }
   .song-frame {
     width: 45vw !important;
     height: 43vw !important;
   }
   .songKaNaam {
-    font-size: 6vw !important;
+    font-size: 5vw !important;
   }
   .artistKaNaam {
     font-size: 3.5vw !important;
@@ -463,6 +470,8 @@
 
   #searchInput{
     margin-left: 1vw;
+    width: 75vw;
+    height: 5vh;
   }
   
   #m-logo{
@@ -755,6 +764,7 @@
   }
   #errMessage {
     font-size: 4vw !important;
+    bottom: 5vh !important;
   }
   #lab {
     display: initial;
@@ -858,6 +868,8 @@
   }
   #searchInput {
     margin-left: 1vw;
+    width: 75vw;
+    height: 5vh;
   }
   #vss {
     left: 2vw;
@@ -875,17 +887,19 @@
     font-size: 3.5vw !important;
   }
   .song-card {
-    width: 100vw !important;
-    left: -11vw;
+    width: 93vw !important;
+    left: -7vw;
+    height: 28vh !important;
     position: absolute;
     top: 0vh;
+
   }
   .song-frame {
     width: 45vw !important;
     height: 43vw !important;
   }
   .songKaNaam {
-    font-size: 6vw !important;
+    font-size: 5vw !important;
   }
   .artistKaNaam {
     font-size: 3.5vw !important;
