@@ -1,0 +1,260 @@
+<% include ./partials/top.ejs %>
+<title>Edit Music</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon/icons8-spotify-3d-fluency-32.png">
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "circularbook";
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+    body{
+      background: rgb(33,33,33) !important;
+    background: linear-gradient(180deg, rgba(33,33,33,1) 19%, rgba(18,18,18,1) 63%) !important;
+    }
+    .login-box {
+  position: absolute;
+  top: 55%;
+  left: 26%;
+  width: 700px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  font-family: "circularblack";
+  font-weight: 200;
+
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+ 
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+
+#cancelbtn{
+  position: absolute;
+  left: 30%;
+  top: -5.2vh !important;
+  border: none;
+  
+}
+
+.banner{
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-image: url(/images/CREATE-removebg-preview.png);
+  background-position: center;
+  background-size: cover;
+
+}
+#toph{
+  color: #fff;
+  font-family: "circularbook";
+  font-weight: 600;
+  margin-top: -3vh;
+  margin-bottom: 5vh;
+}
+ 
+  </style>
+  
+  <div class="login-box edit-box" style="position: absolute; left: 50vw;">
+   <h3 id="toph">EDIT MUSIC</h3>
+    <form action="/edit/song/<%=song._id%>" method="post">
+      <div class="user-box">
+        <input type="text" name="songname" value="<%= song.songname %>" required="" class="nw1">
+        <label>Enter song name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="songdesc" value="<%= song.songdesc %>" required="" class="nw2">
+        <label>Enter song description</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="artist" value="<%= song.artist %>" required="" class="nw3">
+        <label>Enter artist name</label>
+      </div>
+      <div class="user-box">
+        <input type="url" name="songimage" value="<%= song.songimage %>" required="" class="nw4">
+        <label>Enter cover image URL</label>
+      </div>
+      <!-- <div class="user-box">
+        <input type="text" name="lyrics" required="">
+        <label>Enter song lyrics</label>
+      </div> -->
+     <input type="submit" value="UPDATE" style="padding: 10px 30px; border-radius: 500px; cursor: pointer; border: none; background-color: rgb(72, 221, 3);" class="newUpdateBtn">
+    </form>
+    <a href="/home"><button style="padding: 10px 30px; border-radius: 500px; cursor: pointer; position: relative; top: -6.8vh !important; left: 10vw; border: none;" id="cancelbtn" class="newCancel">CANCEL</button></a>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- 
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Select a file:</label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <input type="text" name="songname" placeholder="song name">
+    <input type="text" name="songdesc" placeholder="song desc">
+    <input type="text" name="artist" placeholder="artist name">
+    <input type="url" name="songimage" placeholder="Enter URL of your image">
+
+    <input type="submit" value="Upload">
+  </form>  -->
+
+  <script>
+    if (window.matchMedia("(max-width: 400px)").matches) {
+      var newCancel = document.querySelector(".newCancel");
+      var newInputOne = document.querySelector(".nw1")
+      var newInputTwo = document.querySelector(".nw2")
+      var newInputThree = document.querySelector(".nw3")
+      var newInputFour = document.querySelector(".nw4")
+
+  newInputOne.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputOne.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+  newInputTwo.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputTwo.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+
+  newInputThree.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputThree.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+
+  newInputFour.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputFour.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+    }
+
+
+
+    if (window.matchMedia("(min-width: 401px) and (max-width: 600px)").matches) {
+      var newCancel = document.querySelector(".newCancel");
+      var newInputOne = document.querySelector(".nw1")
+      var newInputTwo = document.querySelector(".nw2")
+      var newInputThree = document.querySelector(".nw3")
+      var newInputFour = document.querySelector(".nw4")
+
+  newInputOne.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputOne.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+  newInputTwo.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputTwo.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+
+  newInputThree.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputThree.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+
+
+  newInputFour.addEventListener("focus", function(){
+    newCancel.style.display = "none"; 
+  })
+  newInputFour.addEventListener("blur", function(){
+    newCancel.style.display = "initial"; 
+  })
+    }
+  
+
+  
+  </script>
+</body>
+</html>

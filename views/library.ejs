@@ -1,0 +1,205 @@
+<% include ./partials/top.ejs %>
+<title>Spotify - Library</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon/icons8-spotify-3d-fluency-32.png">
+
+
+
+<style>
+     @font-face {
+    font-family: circularblack;
+    src: url(/images/сircular-font/Circular/CircularStd-Black.otf);
+}
+
+@font-face {
+    font-family: circularbold;
+    src: url(/images/сircular-font/Circular/CircularStd-Bold.otf);
+}
+
+@font-face {
+    font-family: circularbook;
+    src: url(/images/сircular-font/Circular/CircularStd-Book.otf);
+}
+
+@font-face {
+    font-family: circularmedium;
+    src: url(/images/сircular-font/Circular/CircularStd-Medium.otf);
+}
+
+    .library{
+        width: 78%;
+        /* height: 75%; */
+        position: absolute;
+        top: 12vh;
+        /* z-index: 99; */
+        right: 0;
+        /* background-color: transparent; */
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    
+    }
+    .carrd{
+        position: relative;
+        width: 95%;
+        height: 12%;
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid #ffffff65;
+        padding:  5px 0px;
+        border-radius: 7px;
+      
+    }
+    .carrd:hover{
+        background-color: #dfdfdf65;
+        cursor: pointer;
+    }
+    .frame{
+        width:  5%;
+        height: 95%;
+        background-color: yellow;
+        margin-left: 2vw;
+    }
+    .info{
+        width: 90%;
+        height: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+         
+    }
+    .duration{
+        font-family: "circularbook";
+        color: #fff;
+        font-size: 1vw;
+        margin-right: 15vw;
+    }
+    .sname{
+      font-family: "circularbook";
+      color: #fff !important;
+    }
+    .aname{
+        color: #fff !important;
+        font-weight: 500; 
+        font-size: .8vw;
+        text-align: left;
+    }
+    .symbols{
+        position: absolute;
+        gap:20px;
+        display: none;
+        right: 4vw;
+    }
+    .carrd:hover .symbols{
+        display: flex;
+    }
+
+    .symbols>a>i{
+     font-size: 1.8vw;
+      color: #fff !important;
+      z-index: 10;
+
+    }
+  .editcard1:hover{
+    color: red;
+  }
+
+    .dets{
+        margin-left: 4vw;
+    }
+    .frame>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #errMessage{
+        z-index: 12;
+        color: greenyellow;
+        border: none;
+        font-size: 1.4vw;
+        font-family: "circularbook" !important;
+        font-weight: 400;
+      }
+    #dltMessage{
+        z-index: 12;
+        color: rgb(209, 0, 0);
+        border: none;
+        font-size: 1.4vw;
+        font-family: "circularbook" !important;
+        font-weight: 400;
+      }
+      .cnacelPage{
+        display: none;
+      }
+      
+   
+</style>
+
+
+<div id="libHead" style="position: fixed;"><i class="ri-book-3-line"></i><h1>Library</h1>
+<a href="/home" class="cancelPage"><h6>Cancel</h6></a>
+</div>
+
+<div class="library">
+     
+
+    <!-- FLASH MESSAGE EDIT -->
+<% if (update.length > 0) { %>
+    <div class="alert" style="font-family: circularbook;" id="errMessage">
+      <%= update[0] %>
+    </div>
+  <% } %>
+
+    <!-- FLASH MESSAGE DELETE -->
+<% if (dlt.length > 0) { %>
+    <div class="alert" style="font-family: circularbook;" id="dltMessage">
+      <%= dlt[0] %>
+    </div>
+  <% } %>
+
+<% allSongs.forEach(function(data){ %>
+    <div class="carrd">
+        <div class="frame"><img src="<%= data.songimage %>" alt=""></div>
+        <div class="info">
+        <div class="dets">
+            <div class="sname"><%=data.songname %></div>
+            <div class="aname"><%=data.artist %></div>
+        </div>
+         <div class="duration"></div>
+         <div class="symbols">
+            <a href="/edit/<%= data._id %>" class="editcard1"><i class="ri-pencil-fill" id="pencile"></i></a>
+            <!-- <a href="/delete/<%= data._id %>"  class="editcard2"> <i class="ri-delete-bin-5-fill" id="garbage"></i></a> -->
+         </div>
+        </div>
+    </div>
+<% }) %>
+
+
+
+</div>
+
+
+<script>
+
+ var errMsg = document.querySelector("#errMessage");
+ var dltMsg = document.querySelector("#dltMessage");
+
+ setTimeout(function(){
+    errMsg.style.display = "none";  
+ }, 1500)
+
+ setTimeout(function(){
+    dltMsg.style.display = "none";  
+ }, 1500)
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

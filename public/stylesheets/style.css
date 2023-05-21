@@ -1,0 +1,530 @@
+@font-face {
+  font-family: circularblack;
+  src: url(/images/сircular-font/Circular/CircularStd-Black.otf);
+}
+
+@font-face {
+  font-family: circularbold;
+  src: url(/images/сircular-font/Circular/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: circularbook;
+  src: url(/images/сircular-font/Circular/CircularStd-Book.otf);
+}
+
+@font-face {
+  font-family: circularmedium;
+  src: url(/images/сircular-font/Circular/CircularStd-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "circularbook";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.main {
+  display: flex;
+  overflow-x: hidden;
+  background: rgb(33, 33, 33) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 19%,
+    rgba(18, 18, 18, 1) 63%
+  ) !important;
+}
+.mobile-menu {
+  display: none;
+}
+.logo {
+  width: 100%;
+  height: 10%;
+}
+.logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+  padding-right: 8vw;
+}
+
+.elem-cont-1 {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4vh;
+  color: #fff;
+}
+.elem-cont-2 {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2vh;
+}
+.now {
+  display: none;
+}
+.line {
+  width: 90%;
+  height: 1px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  background-color: #ffffff42;
+  border-radius: 500px;
+}
+
+.elem {
+  width: 40%;
+  height: calc(100% / 3);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 9vw;
+}
+
+.popup>h5{
+  margin-top: 5vh;
+}
+
+.elem > i {
+  font-size: 1.8vw;
+}
+a > h5 {
+  font-size: 1.2vw !important;
+  margin-top: 1vh;
+  width: 50%;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon-box {
+  width: 12vw;
+  height: 10vh;
+}
+
+.button-box > a > button {
+  padding: 5px 18px;
+  border-radius: 500px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-left: 20vw;
+}
+
+.profile-pic {
+  width: 2vw;
+  height: 2vw;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.4vw;
+  top: 0.8vh;
+}
+
+.album-space {
+  position: relative;
+  width: 100%;
+  height: 55%;
+  left: 22vw;
+  background-color: transparent;
+  top: 14vh;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.songs-space {
+  position: relative;
+  width: 100%;
+  left: 21.5vw;
+  top: 14vh;
+  min-height: 80vh;
+  padding-bottom: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffffd7;
+  border-radius: 500px;
+}
+.album {
+  width: 13.5vw;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  background-color: #29292969;
+  border-radius: 10px;
+}
+.song {
+  width: 13.5vw;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 4vw;
+  margin-left: 1.8vw;
+  background-color: #29292969;
+  border-radius: 10px;
+}
+
+.album:hover {
+  background-color: #dfdfdf2d;
+  border-radius: 10px;
+}
+
+.song:hover {
+  background-color: #dfdfdf2d;
+  border-radius: 10px;
+}
+
+.album-image {
+  width: 90%;
+  height: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.song-image {
+  width: 90%;
+  height: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.album-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.song-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.album-title {
+  width: 90%;
+  color: #fff;
+}
+.album-title > h5 {
+  font-size: 1.2vw;
+  padding-left: 10px;
+}
+.album-desc {
+  width: 90%;
+  height: 18%;
+  color: #ffffffdc;
+  line-height: 3vh;
+  margin-top: -2vh;
+}
+.album-desc > p {
+  padding-left: 10px;
+  font-size: 1vw;
+  color: #ffffffa4;
+}
+
+.song-title {
+  width: 90%;
+  color: #fff;
+}
+.song-title > h5 {
+  font-size: 1.2vw;
+  padding-left: 10px;
+}
+.song-desc {
+  width: 90%;
+  height: 18%;
+  color: #ffffffdc;
+  line-height: 3vh;
+  margin-top: -2vh;
+}
+.song-desc > p {
+  padding-left: 10px;
+  font-size: 1vw;
+  color: #ffffffa4;
+}
+
+.play-icon {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10vw;
+  display: none;
+}
+
+.music-player {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 14vh;
+  z-index: 20;
+  background-color: #181818;
+  border-top: 1px solid #ffffff23;
+  display: flex;
+}
+.part-1 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.artist-name {
+  position: absolute;
+  font-size: 1vw;
+  top: 7.5vh;
+  left: 6vw;
+  color: #ffffffbe;
+  text-align: left;
+}
+.cover-image {
+  width: 3.5vw;
+  height: 3.5vw;
+  background-color: #dfdfdfc7;
+}
+.cover-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cover-title {
+  width: 13vw;
+  height: 3.5vw;
+  display: flex;
+  margin-top: -2vh;
+  justify-content: left;
+  text-align: left;
+  color: #fff;
+  align-items: center;
+}
+.part-2 {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.control {
+  width: 55%;
+  height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.control > a {
+  font-size: 3vw;
+}
+.progress {
+  width: 80%;
+  height: 25%;
+  background-color: transparent;
+}
+
+.con {
+  font-size: 2vw !important;
+  color: #dfdfdf;
+}
+.con:hover {
+  color: #fff;
+}
+.elem-1 {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.elem-2 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elem-3 {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.prog-bar {
+  width: 95%;
+  height: 30%;
+  background-color: #dfdfdfb7;
+  border-radius: 500px;
+}
+.prog {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 500px;
+}
+.part-3 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #dfdfdf;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+.sound {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  color: #dfdfdf;
+  cursor: pointer;
+}
+
+#m-player {
+  position: absolute !important;
+  display: none !important;
+}
+
+.lyrics {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 223, 14);
+  position: absolute;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.ly-area {
+  width: 70%;
+  height: 70%;
+  margin-left: 22vw;
+  margin-top: -4.5vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  padding: 50px;
+}
+
+.ly-area::-webkit-scrollbar {
+  display: none;
+}
+
+.ly-area > p {
+  width: 50%;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  line-height: 7vh;
+}
+
+.dropdown-menu > li > a:hover {
+  background-image: none;
+  background-color: #fff;
+  color: #000 !important;
+}
+
+.profile-pic > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#crtMessage {
+  z-index: 12;
+  color: greenyellow;
+  position: relative;
+  top: 12vh;
+  left: 25vw;
+  background-color: rgba(47, 255, 134, 0.438);
+  width: 30vw;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid greenyellow;
+  border-radius: 500px;
+  font-size: 1.4vw;
+  font-family: "circularbook" !important;
+  font-weight: 400;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000a6;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 40vw;
+  height: 15vw;
+  border-radius: 10px;
+  background-color: rgb(30, 135, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 1px 1px 15px #333333b9;
+}
+
+.popup > p {
+  font-size: 1.5vw;
+  color: #fff;
+  width: 80%;
+}
+
+.popup > h5 {
+  position: absolute;
+  color: #fff;
+  top: 65vh;
+  text-decoration: underline;
+  cursor: pointer;
+}

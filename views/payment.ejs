@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Premium Feature</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon/icons8-spotify-3d-fluency-32.png">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      .container-for {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(33, 33, 33) !important;
+        background: linear-gradient(
+          180deg,
+          rgba(33, 33, 33, 1) 19%,
+          rgba(18, 18, 18, 1) 63%
+        ) !important;
+      }
+
+      .cards-area {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+
+        align-items: center;
+      }
+      .payment-card {
+        width: 25%;
+        height: 60vh;
+        margin-top: 15vh;
+        background-color: #000000;
+        color: #fff;
+        border: 1px solid #ffffff62;
+        border-radius: 10px;
+        font-family: "cricularbook";
+        transition: all 0.3s;
+      }
+      .payment-card:hover {
+        transform: scale(1.05);
+      }
+      .validity {
+        background-color: rgb(3, 106, 241);
+        padding: 5px;
+        width: 40%;
+        text-align: center;
+        border-radius: 10px;
+        margin: 20px;
+        font-family: "circularbook";
+        font-weight: 500;
+      }
+      .price {
+        margin-left: 22px;
+        font-size: 1.4vw;
+        margin-top: 1vh;
+      }
+      .acc {
+        margin-left: 22px;
+        color: #ffffffd3;
+      }
+      .value {
+        padding: 18px;
+        list-style: none;
+      }
+      button {
+        margin-left: 22px;
+        padding: 8px 20px;
+        font-family: "circularbook";
+        border-radius: 500px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      .plan {
+        margin-left: 22px;
+        font-size: 2vw;
+      }
+      .top-title {
+        position: absolute;
+        color: #fff;
+        top: 8vh;
+        text-align: center;
+      }
+      .top-title > h1 {
+        font-weight: 500;
+      }
+      .top-title > p {
+        font-weight: 400;
+        font-family: "circularbook";
+        color: #ffffffd8;
+      }
+      #cancelPayment{
+        position: absolute;
+        color: #fff;
+        top: 5vh;
+        left: 90vw;
+        text-decoration: none;
+        cursor: pointer;
+
+      }
+
+      @media only screen and (max-width: 400px) {
+        #cancelPayment>h5{
+          font-size: 3vw !important;
+    margin-left: -5vw;
+    margin-top: -2vh;
+        }
+        .cards-area {
+          width: 100vw;
+          min-height: 100vh;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 12vh;
+        }
+        .payment-card {
+          width: 94vw;
+          height: 100vh;
+          margin-top: 10vh;
+        }
+        .container-for {
+          height: 227vh !important;
+        }
+        .plan {
+          font-size: 8vw;
+        }
+        .price {
+          font-size: 5.5vw;
+          margin-top: -1vh;
+        }
+        .acc {
+          font-size: 4.5vw;
+        }
+
+        .pButton {
+          margin-top: 3vh;
+          z-index: 99;
+        }
+        .top-title > p {
+          font-size: 5vw;
+        }
+      }
+
+      @media only screen and (min-width: 401px) and (max-width: 600px) {
+        #cancelPayment>h5{
+          font-size: 3vw !important;
+    margin-left: -5vw;
+    margin-top: -2vh;
+        }
+        .cards-area {
+          width: 100vw;
+          min-height: 100vh;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 12vh;
+        }
+        .payment-card {
+          width: 94vw;
+          height: 100vh;
+          margin-top: 10vh;
+        }
+        .container-for {
+          height: 227vh !important;
+        }
+        .plan {
+          font-size: 8vw;
+        }
+        .price {
+          font-size: 5.5vw;
+          margin-top: -1vh;
+        }
+        .acc {
+          font-size: 4.5vw;
+        }
+
+        .pButton {
+          margin-top: 3vh;
+          z-index: 99;
+        }
+        .top-title > p {
+          font-size: 5vw;
+        }
+      }
+    </style>
+
+    <div class="container-for">
+     <a href="/home"  id="cancelPayment"> <h5>Cancel</h5></a>
+      <div class="cards-area">
+        <div class="top-title">
+          <h1>Pick your Premium</h1>
+          <p>
+            Listen without limits on your phone, speaker, and other devices.
+          </p>
+        </div>
+
+        <div class="payment-card">
+          <div class="validity">1-month</div>
+          <div class="plan">Mini Pack</div>
+          <div class="price">₹119/ month after offer period</div>
+          <div class="acc">1 device only</div>
+          <hr />
+          <div class="value">
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Ad-free music
+              listening
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Group session
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Download 10k
+              songs
+            </li>
+          </div>
+          <button id="rzp-button1" class="pButton pp1">Purchase</button>
+        </div>
+
+        <div class="payment-card">
+          <div class="validity">3-month</div>
+          <div class="plan">Semi Loaded</div>
+          <div class="price">₹299/ for 3 months offer period</div>
+          <div class="acc">2 device</div>
+          <hr />
+          <div class="value">
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Ad-free music
+              listening
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Group session
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Download 30k
+              songs
+            </li>
+          </div>
+          <button class="pButton">Purchase</button>
+        </div>
+
+        <div class="payment-card">
+          <div class="validity">12-month</div>
+          <div class="plan">Fully Loaded</div>
+          <div class="price">₹599/ for 12 months offer period</div>
+          <div class="acc">3 device</div>
+          <hr />
+          <div class="value">
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Ad-free music
+              listening
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Group session
+            </li>
+            <li>
+              <i class="ri-check-line" style="color: #fff"></i> Download
+              Unlimited songs
+            </li>
+          </div>
+          <button class="pButton">Purchase</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button id="rzp-button1">Pay with Razorpay</button> -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      var orderId;
+      $(document).ready(function () {
+        var settings = {
+          url: "/create/orderId",
+          method: "POST",
+          timeout: 0,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify({
+            amount: "50000",
+          }),
+        };
+
+        //creates new orderId everytime
+        $.ajax(settings).done(function (response) {
+          orderId = response.orderId;
+          console.log(orderId);
+          $("button").show();
+        });
+      });
+
+    
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

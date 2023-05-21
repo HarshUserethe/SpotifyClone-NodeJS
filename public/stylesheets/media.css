@@ -1,0 +1,1011 @@
+@media only screen and (max-width: 400px) {
+  #boxlogin {
+    overflow: hidden !important;
+  }
+  .right-side {
+    position: absolute;
+    left: 100%;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .logo {
+    width: 64vw;
+  }
+  .txt > h2 {
+    font-size: 5vw !important;
+    color: #ffffffd5;
+  }
+  .user-box {
+    width: 100% !important;
+  }
+
+  #signup {
+    padding: 10px 60px;
+    margin-top: 1vh;
+  }
+
+  #loginbtn {
+    position: absolute;
+    left: -67.5vw;
+    top: -1vh;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+  }
+
+  .sq {
+    width: 5vw !important;
+    height: 5vw !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  #or {
+    display: none;
+  }
+  .top > h3 {
+    position: absolute;
+    left: -94%;
+    top: 74%;
+    font-size: 5vw !important;
+    color: #ffffffdc;
+  }
+  #loginbutton {
+    position: relative;
+    top: 4.5vh;
+    padding: 10px 120px;
+  }
+  .signupTwo {
+    position: relative;
+    top: 4.5vh;
+    padding: 10px 60px;
+  }
+
+  .box-1 {
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 99 !important;
+    display: none;
+  }
+
+  .elem > a > h5 {
+    font-size: 5.5vw !important;
+  }
+
+  .elem > i {
+    display: none;
+  }
+
+  .elem-cont-1 {
+    align-items: start;
+  }
+  .elem-cont-2 {
+    align-items: start;
+  }
+  .elem-cont-2 > .elem {
+    margin-left: 7vw;
+  }
+
+  #heart {
+    margin-left: -2vw !important;
+  }
+
+  .album-space {
+    /* height: 30vh;
+    position: relative;
+    left: 0;
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly !important;
+    overflow-x: scroll;
+    flex-direction: column; */
+    height: 32vh;
+    position: relative;
+    left: 0;
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly !important;
+    overflow-x: scroll;
+    flex-direction: column;
+    /* background: green; */
+    padding-top: 27px;
+    /* padding-bottom: 20px; */
+    top: 11vh;
+   
+  }
+  .album-space::-webkit-scrollbar {
+    display: none;
+  }
+
+  .songs-space {
+    left: 0;
+    width: 100vw;
+    padding-top: 20px;
+  }
+
+  .album {
+    width: 44vw;
+    height: 60vw;
+    margin-top: 3vh;
+    background: transparent;
+    padding-bottom: 16px;
+  }
+  .focus {
+    font-size: 5.5vw !important;
+    margin-left: 2vw;
+    margin-top: 1.2vh;
+    font-family: 'circularbook';
+  }
+  .album-title > h5 {
+    font-size: 3.8vw !important;
+  }
+  .album-desc > p {
+    font-size: 2.8vw !important;
+    line-height: 2vh;
+    margin-top: 0.8vh;
+  }
+  .song-title > h5 {
+    font-size: 3.8vw !important;
+  }
+  .song-desc > p {
+    font-size: 2.8vw !important;
+    line-height: 2vh;
+    margin-top: 0.8vh;
+  }
+  #assp {
+    width: 44vw;
+    height: 56vw;
+  }
+  .song {
+    width: 44vw;
+    height: 60vw;
+    margin-right: 4vw;
+    margin-top: 4vh;
+    background: transparent;
+  }
+  #mostTrending {
+    margin-top: 3vh;
+  }
+  .dropdown {
+    display: none;
+  }
+  .same {
+    display: none !important;
+  }
+  .now {
+    display: initial;
+  }
+
+  .cover-title {
+    position: absolute;
+    margin-top: -3vh;
+    font-size: 3.9vw;
+    margin-left: 85vw;
+    width: 60vw;
+  }
+  .artist-name {
+    position: absolute;
+    margin-top: -0.8vh;
+    font-size: 3.2vw;
+    margin-left: 16.5vw;
+    width: 60vw;
+  }
+  .part-3 {
+    display: none;
+  }
+  /* .part-2{
+    
+  } */
+  .control > a > i {
+    font-size: 9vw !important;
+    margin: 2.5vw;
+  }
+  .cover-image {
+    width: 16vw;
+    height: 13vw;
+    margin-left: 6vw;
+    margin-top: -3vh;
+  }
+  #errMessage {
+    font-size: 4vw !important;
+  }
+  #lab {
+    display: initial;
+    display: initial;
+    width: 48vw;
+    /* background: red; */
+    left: -35vw !important;
+  }
+  #shuffle {
+    display: none;
+  }
+
+  #back {
+    display: none;
+  }
+  #next {
+    display: none;
+  }
+  #loop {
+    display: none;
+  }
+  #playbtn {
+    margin-left: 75vw !important;
+    margin-top: 1vh !important;
+    display: none;
+  }
+  .progress {
+    width: 90vw !important;
+    display: none;
+    margin-top: -1vh;
+  }
+
+  .mobile-menu {
+    display: initial;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(16,16,16);
+    z-index: 99;
+    left: -100%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+
+  li {
+    list-style: none;
+    margin-top: -1vh;
+  }
+  .mo {
+    font-size: 5.2vw !important;
+    margin: 20vw;
+    margin-top: 10vh !important;
+    position: relative;
+    top: 14vh;
+    left: 0vw;
+  }
+  .mo > li > i {
+    font-size: 7vw;
+    margin-right: 3vw;
+    position: relative;
+    top: 0.5vh;
+  }
+
+  .mobile-menu > button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    color: #fff;
+    padding: 6px 20px;
+    position: absolute;
+    left: 8vw;
+    top: 75vh;
+  }
+
+  #close {
+    color: #ffffffb6;
+    position: absolute;
+    font-size: 6vw;
+    padding: 25px;
+    right: 0;
+    margin: 5vw;
+    margin-right: 1vw;
+  }
+
+  #oneBox {
+    display: none;
+  }
+
+  #upgButton {
+    display: none;
+  }
+  #searchbtn {
+    margin-left: -2vw;
+    border: none !important;
+    font-size: 4.5vw;
+    margin-top: 0.5vh;
+  }
+  #searchResult {
+    width: 100vw !important;
+    height: 60vh !important;
+    left: 0 !important;
+    margin-top: 3vh;
+  }
+  #vss {
+    left: 2vw;
+    height: 15vw;
+    position: relative;
+  }
+  .vessel-frame {
+    width: 12vw !important;
+    height: 12vw !important;
+  }
+  .vs-name {
+    font-size: 4.5vw !important;
+  }
+  .vs-artist {
+    font-size: 3.5vw !important;
+  }
+  .song-card {
+    width: 100vw !important;
+    left: -11vw;
+    position: absolute;
+    top: 0vh;
+  }
+  .song-frame {
+    width: 45vw !important;
+    height: 43vw !important;
+  }
+  .songKaNaam {
+    font-size: 6vw !important;
+  }
+  .artistKaNaam {
+    font-size: 3.5vw !important;
+  }
+  .songKadesc {
+    font-size: 3vw !important;
+    /* background: green; */
+    width: 80%;
+  }
+  #playbutton {
+    margin-left: -2vw;
+  }
+  .carrd {
+    height: 12vh !important;
+  }
+  .library {
+    width: 100vw !important;
+    min-height: 100vh;
+    margin-top: -2vh !important;
+    background-color: rgb(18, 18, 18);
+  }
+  .carrd > .frame {
+    width: 20vw;
+  }
+  .aname {
+    font-size: 3vw !important;
+  }
+  #pencile {
+    font-size: 5vw !important;
+  }
+  #garbage {
+    font-size: 5vw !important;
+  }
+
+  /* bug apprearance */
+  .edit-box {
+    width: 100vw !important;
+    height: 80vh;
+    margin-left: -5vw;
+  }
+  #cancelbtn {
+    margin-left: 25vw;
+    margin-top: 0.9vh;
+    padding: 9px 26px !important;
+  }
+  /* .icon-box{
+  display: none !important;
+} */
+  #libHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    z-index: 99 !important;
+    left: 3vw;
+    top: 3vh;
+    width: 40vw;
+  }
+  .ri-book-3-line {
+    font-size: 7vw;
+    margin-top: -1vh;
+  }
+
+  .banner {
+    display: none;
+  }
+  .create-box {
+    /* background-color: red; */
+    width: 100vw !important;
+    /* right: 0 !important; */
+    left: 50vw !important;
+    margin-left: -5vw;
+  }
+  #createSong {
+    top: 1vh;
+    position: relative;
+    padding: 11px 30px !important;
+  }
+  #songHead {
+    color: #fff;
+    position: absolute;
+    margin: 25px;
+    margin-top: 6vh;
+    display: initial !important;
+  }
+
+  .thumbnail {
+    background-color: red;
+  }
+
+  .popup {
+    width: 80vw;
+    height: 20vh;
+    margin-top: -15vh;
+  }
+  .popup > p {
+    font-size: 4.5vw;
+    width: 90%;
+  }
+  .popup>h5{
+    margin-top: -8vh;
+  }
+
+  /* NEW CHANGES ----> */
+  .right-side{
+    display: none !important;
+  }
+  .top{
+    top: 68vh !important;
+  }
+  #assp{
+    height: 27vh;
+  }
+  #assp>.album-image{
+    height: 16.5vh;
+  }
+  .music-player{
+    position: fixed;
+  }
+
+  #searchInput{
+    margin-left: 1vw;
+  }
+  
+  #m-logo{
+    position: absolute;
+    margin-top: 3vh;
+    width: 48vw;
+    margin-left:2vw;
+  }
+  .cancelPage{
+    position: absolute;
+    color: #fff;
+    right: -49vw;
+    display: initial;
+  }
+  .cancelPage>h6{
+    font-size: 4vw;
+  }
+  html{
+    zoom: 100% !important;
+  }
+  #crtMessage {
+    z-index: 12;
+    color: greenyellow;
+    position: relative;
+    top: 12vh;
+    left: 9vw;
+    background-color: rgba(47, 255, 134, 0.438);
+    width: 82vw;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid greenyellow;
+    border-radius: 500px;
+    font-size: 3.8vw;
+    font-family: "circularbook" !important;
+    font-weight: 400;
+    height: 6vh;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  #crtMessage {
+    z-index: 12;
+    color: greenyellow;
+    position: relative;
+    top: 12vh;
+    left: 9vw;
+    background-color: rgba(47, 255, 134, 0.438);
+    width: 82vw;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid greenyellow;
+    border-radius: 500px;
+    font-size: 3.8vw;
+    font-family: "circularbook" !important;
+    font-weight: 400;
+    height: 6vh;
+  }
+  .cancelPage{
+    position: absolute;
+    color: #fff;
+    right: -49vw;
+    display: initial;
+  }
+  .cancelPage>h6{
+    font-size: 4vw;
+  }
+  #m-logo{
+    position: absolute;
+    margin-top: 3vh;
+    width: 48vw;
+    margin-left:2vw;
+  }
+  #boxlogin {
+    overflow: hidden !important;
+  }
+  .right-side {
+    position: absolute;
+    left: 100%;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .logo {
+    width: 64vw;
+  }
+  .txt > h2 {
+    font-size: 5vw !important;
+    color: #ffffffd5;
+  }
+  .user-box {
+    width: 100% !important;
+  }
+  .user-box > input {
+    font-size: 5vw !important;
+  }
+
+  #signup {
+    padding: 10px 60px;
+    margin-top: 1vh;
+  }
+
+  #loginbtn {
+    position: absolute;
+    left: -63.5vw;
+    top: -1vh;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+  }
+
+  #lab {
+    margin-top: 0.2vh !important;
+  }
+
+  .sq {
+    width: 5vw !important;
+    height: 5vw !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  #or {
+    display: none;
+  }
+  .top > h3 {
+    position: absolute;
+    left: -94%;
+    top: 74%;
+    font-size: 5vw !important;
+    color: #ffffffdc;
+  }
+  #loginbutton {
+    position: relative;
+    top: 4.5vh;
+    padding: 10px 120px;
+  }
+  .signupTwo {
+    position: relative;
+    top: 4.5vh;
+    padding: 10px 60px;
+  }
+
+  .box-1 {
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 99 !important;
+    display: none;
+  }
+
+  .elem > a > h5 {
+    font-size: 5.5vw !important;
+  }
+
+  .elem > i {
+    display: none;
+  }
+
+  .elem-cont-1 {
+    align-items: start;
+  }
+  .elem-cont-2 {
+    align-items: start;
+  }
+  .elem-cont-2 > .elem {
+    margin-left: 7vw;
+  }
+
+  #heart {
+    margin-left: -2vw !important;
+  }
+
+  .album-space {
+    /* height: 30vh;
+    position: relative;
+    left: 0;
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly !important;
+    overflow-x: scroll;
+    flex-direction: column; */
+    height: 32vh;
+    position: relative;
+    left: 0;
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly !important;
+    overflow-x: scroll;
+    flex-direction: column;
+    /* background: green; */
+    padding-top: 27px;
+    /* padding-bottom: 20px; */
+    top: 11vh;
+    
+  }
+  .album-space::-webkit-scrollbar {
+    display: none;
+  }
+
+  .songs-space {
+    left: 0;
+    width: 100vw;
+    padding-top: 20px;
+  }
+
+  .album {
+    width: 44vw;
+    height: 60vw;
+    margin-top: 3vh;
+    background: transparent;
+    padding-bottom: 16px;
+  }
+  .focus {
+    font-size: 5.5vw !important;
+    margin-left: 2vw;
+    margin-top: 1.2vh;
+    font-family: 'circularbook';
+  }
+  .album-title > h5 {
+    font-size: 3.8vw !important;
+  }
+  .album-desc > p {
+    font-size: 2.8vw !important;
+    line-height: 2vh;
+    margin-top: 0.8vh;
+  }
+  .song-title > h5 {
+    font-size: 3.8vw !important;
+  }
+  .song-desc > p {
+    font-size: 2.8vw !important;
+    line-height: 2vh;
+    margin-top: 0.8vh;
+  }
+  #assp {
+    width: 44vw;
+    height: 56vw;
+  }
+
+  .song {
+    width: 44vw;
+    height: 60vw;
+    margin-right: 4vw;
+    margin-top: 4vh;
+    background: transparent;
+  }
+  #mostTrending {
+    margin-top: 3vh;
+  }
+  .dropdown {
+    display: none;
+  }
+  .same {
+    display: none !important;
+  }
+  .now {
+    display: initial;
+  }
+
+  .cover-title {
+    position: absolute;
+    margin-top: -3vh;
+    font-size: 3.9vw;
+    margin-left: 85vw;
+    width: 60vw;
+  }
+  .artist-name {
+    position: absolute;
+    margin-top: -0.8vh;
+    font-size: 3.2vw;
+    margin-left: 16.5vw;
+    width: 60vw;
+  }
+  .part-3 {
+    display: none;
+  }
+  /* .part-2{
+    
+  } */
+  .control > a > i {
+    font-size: 9vw !important;
+    margin: 2.5vw;
+  }
+  .cover-image {
+    width: 16vw;
+    height: 13vw;
+    margin-left: 6vw;
+    margin-top: -3vh;
+  }
+  #errMessage {
+    font-size: 4vw !important;
+  }
+  #lab {
+    display: initial;
+    display: initial;
+    width: 48vw;
+    /* background: red; */
+    left: -36vw !important;
+  }
+  #shuffle {
+    display: none;
+  }
+
+  #back {
+    display: none;
+  }
+  #next {
+    display: none;
+  }
+  #loop {
+    display: none;
+  }
+  #playbtn {
+    margin-left: 75vw !important;
+    margin-top: 1vh !important;
+    display: none;
+  }
+  .progress {
+    width: 90vw !important;
+    display: none;
+    margin-top: -1vh;
+  }
+
+  .mobile-menu {
+    display: initial;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c2929;
+    z-index: 99;
+    left: -100%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  }
+
+  li {
+    list-style: none;
+  }
+  .mo {
+    font-size: 5.2vw !important;
+    margin: 20vw;
+    margin-top: 10vh !important;
+    position: relative;
+    top: 14vh;
+    left: 0vw;
+  }
+  .mo > li > i {
+    font-size: 7vw;
+    margin-right: 3vw;
+    position: relative;
+    top: 0.5vh;
+  }
+
+  .mobile-menu > button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    color: #fff;
+    padding: 6px 20px;
+    position: absolute;
+    left: 8vw;
+    top: 75vh;
+  }
+
+  #close {
+    color: #ffffffb6;
+    position: absolute;
+    font-size: 6vw;
+    padding: 25px;
+    right: 0;
+    margin: 5vw;
+    margin-right: 1vw;
+  }
+
+  #oneBox {
+    display: none;
+  }
+
+  #upgButton {
+    display: none;
+  }
+  #searchbtn {
+    margin-left: -1vw;
+    border: none !important;
+    font-size: 4.5vw;
+    margin-top: 0.5vh;
+  }
+  #searchResult {
+    width: 100vw !important;
+    height: 60vh !important;
+    left: 0 !important;
+    margin-top: 3vh;
+  }
+  #searchInput {
+    margin-left: 1vw;
+  }
+  #vss {
+    left: 2vw;
+    height: 15vw;
+    position: relative;
+  }
+  .vessel-frame {
+    width: 12vw !important;
+    height: 12vw !important;
+  }
+  .vs-name {
+    font-size: 4.5vw !important;
+  }
+  .vs-artist {
+    font-size: 3.5vw !important;
+  }
+  .song-card {
+    width: 100vw !important;
+    left: -11vw;
+    position: absolute;
+    top: 0vh;
+  }
+  .song-frame {
+    width: 45vw !important;
+    height: 43vw !important;
+  }
+  .songKaNaam {
+    font-size: 6vw !important;
+  }
+  .artistKaNaam {
+    font-size: 3.5vw !important;
+  }
+  .songKadesc {
+    font-size: 3vw !important;
+    /* background: green; */
+    width: 80%;
+  }
+  #playbutton {
+    margin-left: -2vw;
+  }
+  .carrd {
+    height: 12vh !important;
+  }
+  .library {
+    width: 100vw !important;
+    min-height: 100vh;
+    margin-top: -2vh !important;
+    background-color: rgb(18, 18, 18);
+  }
+  .carrd > .frame {
+    width: 20vw;
+  }
+  .aname {
+    font-size: 3vw !important;
+  }
+  #pencile {
+    font-size: 5vw !important;
+  }
+  #garbage {
+    font-size: 5vw !important;
+  }
+
+  /* bug apprearance */
+  .edit-box {
+    width: 100vw !important;
+    height: 80vh;
+    margin-left: -5vw;
+  }
+  #cancelbtn {
+    margin-left: 25vw;
+    margin-top: 1.7vh;
+    padding: 9px 26px !important;
+  }
+  /* .icon-box{
+  display: none !important;
+} */
+  #libHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    z-index: 99 !important;
+    left: 3vw;
+    top: 3vh;
+    width: 40vw;
+  }
+  .ri-book-3-line {
+    font-size: 7vw;
+    margin-top: -1vh;
+  }
+
+  .banner {
+    display: none;
+  }
+  .create-box {
+    /* background-color: red; */
+    width: 100vw !important;
+    /* right: 0 !important; */
+    left: 50vw !important;
+    margin-left: -5vw;
+  }
+  #createSong {
+    top: 1vh;
+    position: relative;
+    padding: 11px 30px !important;
+  }
+  #songHead {
+    color: #fff;
+    position: absolute;
+    margin: 25px;
+    margin-top: 6vh;
+    display: initial !important;
+  }
+
+  .thumbnail {
+    background-color: transparent;
+  }
+    /* NEW CHANGES ----> */
+    .popup {
+      width: 80vw;
+      height: 20vh;
+      margin-top: -15vh;
+    }
+    .popup > p {
+      font-size: 4.5vw;
+      width: 90%;
+    }
+    .popup>h5{
+      margin-top: -8vh;
+    }
+  
+    /* NEW CHANGES ----> */
+    .right-side{
+      display: none !important;
+    }
+    .top{
+      top: 68vh !important;
+    }
+    #assp{
+      height: 27vh;
+    }
+    #assp>.album-image{
+      height: 16.5vh;
+    }
+    .music-player{
+      position: fixed;
+    }
+
+
+}

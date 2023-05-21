@@ -1,0 +1,330 @@
+<%include ./partials/top.ejs%>
+<title>Search</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon/icons8-spotify-3d-fluency-32.png">
+<div class="lyrics">
+    <div class="ly-area">
+     <p></p>
+    </div>
+   </div>
+    
+     <div class="music-player">
+      
+      <div class="for-player">
+        
+      </div>
+      
+
+       <div class="part-1">
+       
+       </div>
+
+
+       <div class="part-2">
+         <div class="control">
+           <a href="#" id="shuffle" class="con"><i class="ri-shuffle-line"></i></a>
+           <a href="#" id="back" class="con"><i class="ri-skip-back-fill"></i></a>
+           <a href="#" id="playbtn"><i class="ri-play-circle-fill"></i></a>
+           <a href="#" id="next" class="con"><i class="ri-skip-forward-fill"></i></a>
+           <a href="#" id="loop" class="con"><i class="ri-repeat-2-line"></i></a>
+         </div>
+         <div class="progress">
+           <div class="elem-1">0:00</div>
+           <div class="elem-2">
+             <div class="prog-bar">
+               <div class="prog"></div>
+             </div>
+           </div>
+           <div class="elem-3">0:00</div>
+         </div>
+       </div>
+
+
+       <div class="part-3">
+         <i class="ri-search-eye-line" id="lybtn"></i>
+         <div class="sound">
+           <a href="#"><i class="ri-volume-down-line"></i></a>
+           <input type="range" class="form-range" id="customRange1">
+         </div>
+       </div>
+     </div>
+
+
+
+<style>
+  form{
+    height: 10%;
+    margin-right: 45vw;
+    z-index: 10;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   #searchInput{
+    border: none;
+    padding: 8px 50px;
+    border-radius: 500px;
+    outline: none;
+   }
+   #searchbtn{
+    padding: 8px 14px;
+    border-radius: 500px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .4s;
+   }
+   #searchbtn:hover{
+    background-color: #fffffff8;
+    color: #000;
+   }
+
+   #searchResult{
+    z-index: 12;
+    position: absolute;
+    width: 50vw;
+    height: 40vh;
+    left: 22vw;
+    top: 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   #searchResult::-webkit-scrollbar{
+    display: none;
+   }
+   .vessel-frame>img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   }
+   
+   .vessel-frame{
+    width:  3vw;
+    height: 3vw;
+    background-color: #fff;
+    margin-left: .8vw;
+   }
+   .vessel{
+    width: 95%;
+    height: 20%;
+    border: 1px solid #ffffff31;
+    border-radius: 7px;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+  
+   .vs-name{
+    color: #fff;
+    font-size: 1.1vw;
+    
+   }
+   .vs-artist{
+  color: #ffffffa8;
+  font-size: .9vw;
+  line-height: 1.4vh;
+   }
+   .vessel-info{
+    width: 50%;
+    height: 70%;
+    text-align: left;
+    margin-right: 18vw;
+   }
+   .vessel:hover{
+    background-color: #ffffff1a;
+    cursor: pointer;
+   }
+   .sitem{
+    width: 15vw;
+    height: 40vh;
+    position: absolute;
+    z-index: 12;
+    left: 25vw;
+    top: 12vh;
+    border: 1px solid #ffffff27;
+    border-radius: 7px;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+   }
+   .sitem:hover{
+    background-color: #ffffff1a;
+    cursor: pointer;
+   }
+   .item-frame{
+    width:  13vw;
+    height: 13vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 5%;
+    border-radius: 7px;
+    background-color: #fff;
+
+   }
+   .item-frame>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
+   .item-dets{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    padding-left: 25px;
+    text-align: left;
+    transform: translate(-50%, 0);
+    color: #fff;
+    width: 100%;
+   }
+   .song-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   #playbutton{
+    padding: 6px 40px;
+    border-radius: 500px;
+    background-color: rgb(36, 214, 0);
+    color: #fff;
+    font-family: "circularbook";
+    border: none;
+    margin-top: 10px;
+   }
+   .songKadesc{
+     margin-top: 1vh;
+   }
+   .songKaNaam{
+    margin-top: 1vh;
+   }
+   
+</style>
+
+    <form action="/searchsong">
+        <input type="text" name="q" id="searchInput" placeholder="Search your song">
+        <input type="submit" name="submitbtn" value="Search" id="searchbtn">
+    </form>
+    <div id="searchResult">
+        <!-- <div class="vessel">
+            <div class="vessel-frame"> <img src="" alt=""> </div>
+            <div class="vessel-info">
+                <div class="vs-name">Tum prem ho</div>
+                <div class="vs-artist">Mohit l...</div>
+            </div>
+        </div> -->
+        <!-- <div class="song-card" style="width: 40vw; height: 30vh; border: 1px solid #ffffff2c; margin-left: 40px; border-radius: 10px;">
+           <div class="song-frame" style="width:40%; height: 80%; background-color: #fff; border-radius: 10px; margin-left: 15px;"><img src="" alt=""></div>
+           <div class="next-card" style="margin-left: 25px; width: 50%;">
+            <div class="songKaNaam" style="font-size: 2vw; font-family: circularbook; color: #fff; font-weight: 100;">Tum Prem Ho</div>
+            <div class="artistKaNaam" style="font-size: 1.4vw; font-family: circularbook; color: #ffffffd0;">Harsh Userethe</div>
+            <div class="songKadesc" style=" font-size: 1.2vw; font-family: circularbook; color: #ffffffb2;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+            <a href=""><button id="playbutton">Play</button></a>
+           </div>
+        </div> -->
+    </div>
+
+      <!-- <div class="sitem">
+      <div class="item-frame"><img src="" alt="" id="itemFrame"></div>
+      <div class="item-dets">
+        <div class="item-name" style="font-size: 1.5vw;">Tum prem ho</div>
+        <div class="item-artist" style="font-size: 1vw; color: #ffffffa4;">Harsh userethe</div>
+      </div>
+    </div>  -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.1/axios.min.js" integrity="sha512-NbjaUHU8g0+Y8tMcRtIz0irSU3MjLlEdCvp82MqciVF4R2Ru/eaXHDjNSOvS6EfhRYbmQHuznp/ghbUvcC0NVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+    
+        var searchInput = document.querySelector("#searchInput");
+        var searchResult = document.querySelector("#searchResult");
+
+      
+     
+
+        searchInput.addEventListener("input", function(){
+            const searchTerm = searchInput.value.trim();
+            if(searchTerm){
+                axios.get(`/search?q=${searchTerm}`)  
+                .then(function(response){  
+                    const results = response.data;  
+                    searchResult.innerHTML = '';
+                    if(results.length > 0){  
+                    results.forEach(function(result){  
+                        // const li = document.createElement('li');
+                        // li.textContent = result.songname;
+                        // searchResult.appendChild(li);
+                        searchResult.style.display = "initial";
+                        searchResult.innerHTML += `<div class="vessel" id="vss">
+            <div class="vessel-frame"> <img src="${result.songimage}" alt=""> </div>
+            <div class="vessel-info">
+                <div class="vs-name">${result.songname}</div>
+                <div class="vs-artist">${result.artist}</div>
+            </div>
+        </div>`
+                    });
+
+      //ON CLICK SEARCHED ITEM DETAILS WILBE SHOWED
+           var v = document.querySelectorAll(".vessel");
+          
+           v.forEach(function(vs){
+           vs.addEventListener("click", function(){
+           var sname = this.querySelector(".vs-name").textContent;
+           console.log(sname)
+           searchInput.value = `${sname}`
+           searchResult.style.display = "none";
+            })
+        })
+                    }
+                })
+                
+            }
+        })
+        
+  function songSearch(){
+    
+    var searchbtn = document.querySelector("#searchbtn");
+    var itemFrame = document.querySelector("#itemFrame");
+    var itemName = document.querySelector(".item-name");
+    var itemArtist = document.querySelector(".item-artist");
+
+    var sitem = document.querySelector(".sitem");
+    searchbtn.addEventListener("click", function(){
+      sitem.style.display = "flex";
+    })
+    
+  }
+
+  var songCard = document.querySelector(".song-card");
+  searchbtn.addEventListener("click", function(){
+    
+  })
+
+//   searchbtn.addEventListener("click", function(){
+//  searchResult.innerHTML = `   <div class="song-card" style="width: 40vw; height: 30vh; border: 1px solid #ffffff2c; margin-left: 40px; border-radius: 10px;">
+//            <div class="song-frame" style="width:40%; height: 80%; background-color: #fff; border-radius: 10px; margin-left: 15px;"><img src="" alt=""></div>
+//            <div class="next-card" style="margin-left: 25px; width: 50%;">
+//             <div class="songKaNaam" style="font-size: 2vw; font-family: circularbook; color: #fff; font-weight: 100;">Tum Prem Ho</div>
+//             <div class="artistKaNaam" style="font-size: 1.4vw; font-family: circularbook; color: #ffffffd0;">Harsh Userethe</div>
+//             <div class="songKadesc" style=" font-size: 1.2vw; font-family: circularbook; color: #ffffffb2;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+//             <a href=""><button id="playbutton">Play</button></a>
+//            </div>
+//         </div>`
+//   })
+
+
+  songSearch();
+
+       
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>

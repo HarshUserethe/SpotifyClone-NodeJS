@@ -1,0 +1,267 @@
+@font-face {
+  font-family: circularblack;
+  src: url(/images/сircular-font/Circular/CircularStd-Black.otf);
+}
+
+@font-face {
+  font-family: circularbold;
+  src: url(/images/сircular-font/Circular/CircularStd-Bold.otf);
+}
+
+@font-face {
+  font-family: circularbook;
+  src: url(/images/сircular-font/Circular/CircularStd-Book.otf);
+}
+
+@font-face {
+  font-family: circularmedium;
+  src: url(/images/сircular-font/Circular/CircularStd-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: rgb(33, 33, 33);
+  background: linear-gradient(
+    180deg,
+    rgba(33, 33, 33, 1) 35%,
+    rgba(18, 18, 18, 1) 63%
+  );
+}
+
+.bubbles {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left-side {
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+.right-side {
+  width: 60vw;
+  height: 100vh;
+  background-color: rgb(124, 124, 124);
+  background-image: url(https://images.unsplash.com/photo-1450859018738-29f67b1a6102?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1181&q=80);
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  width: 15vw;
+  height: 10vh;
+  margin-top: -20vh;
+}
+.logo > img {
+  width: 95%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.txt {
+  position: absolute;
+  color: #fff;
+  margin-top: 18vh;
+}
+.elem {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 60%;
+}
+.elem > .txt > h2 {
+  font-size: 1.4vw;
+  margin-top: -20vh;
+}
+
+.login-box {
+  width: 400px;
+  padding: 40px;
+  margin-top: 0vh;
+  background: transparent;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-box .user-box {
+  position: relative;
+  width: 25vw;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #ffffffe0;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.joinbtn {
+  padding: 11px 130px;
+  border-radius: 500px;
+  background-color: #31b454;
+  color: #fff;
+  border: none;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.sq {
+  width: 2vw;
+  height: 2vw;
+}
+
+.sq > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#signup {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 60px;
+  border-radius: 500px;
+  border: none;
+  margin-top: 4vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20vw;
+  margin-top: 3vh;
+  margin-left: 38vw;
+}
+
+.top > h3 {
+  color: #fff;
+  font-size: 1.4vw;
+  margin-top: 1vh;
+}
+.top > button {
+  padding: 10px 30px;
+  border-radius: 500px;
+  border: none;
+  background-color: #31b454;
+  color: #fff;
+}
+
+.heading {
+  width: 50vw;
+  height: 40vw;
+  position: absolute;
+  top: 55%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading > h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 14vh;
+  font-weight: 700;
+}
+.heading > p {
+  color: #fff;
+  font-size: 1.5vw;
+  margin-top: 1vh;
+  font-weight: 400;
+}
+
+#register {
+  display: flex;
+}
+
+#login {
+  display: none;
+}

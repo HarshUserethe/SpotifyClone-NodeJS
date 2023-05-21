@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Song</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon/icons8-spotify-3d-fluency-32.png">
+    <link rel="stylesheet" href="/stylesheets/media.css" />
+  </head>
+  <body>
+    <style>
+      @font-face {
+        font-family: circularblack;
+        src: url(/images/сircular-font/Circular/CircularStd-Black.otf);
+      }
+
+      @font-face {
+        font-family: circularbold;
+        src: url(/images/сircular-font/Circular/CircularStd-Bold.otf);
+      }
+
+      @font-face {
+        font-family: circularbook;
+        src: url(/images/сircular-font/Circular/CircularStd-Book.otf);
+      }
+
+      @font-face {
+        font-family: circularmedium;
+        src: url(/images/сircular-font/Circular/CircularStd-Medium.otf);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "circularbook";
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background: rgb(33, 33, 33) !important;
+        background: linear-gradient(
+          180deg,
+          rgba(33, 33, 33, 1) 19%,
+          rgba(18, 18, 18, 1) 63%
+        ) !important;
+      }
+
+      #songHead {
+        display: none;
+      }
+      .login-box {
+        position: absolute;
+        top: 50%;
+        left: 26%;
+        width: 500px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        font-family: "circularblack";
+        font-weight: 200;
+      }
+
+      .login-box .user-box {
+        position: relative;
+      }
+
+      .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+
+      .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      .login-box .user-box input:focus ~ label,
+      .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #bdb8b8;
+        font-size: 12px;
+      }
+
+      .login-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+      }
+
+      .login-box a span {
+        position: absolute;
+        display: block;
+      }
+
+      @keyframes btn-anim1 {
+        0% {
+          left: -100%;
+        }
+
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      #cancelbtn {
+        position: absolute;
+        left: 30%;
+        top: -5.2vh !important;
+        border: none;
+      }
+
+      .banner {
+        width: 50vw;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        background-image: url(/images/CREATE-removebg-preview.png);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <h1 id="songHead">Create Song</h1>
+    <div class="login-box create-box">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="user-box">
+          <input type="text" name="songname" required="" class="vo1" />
+          <label>Enter song name</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="songdesc" required="" class="vo2" />
+          <label>Enter song description</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="artist" required="" class="vo3" />
+          <label>Enter artist name</label>
+        </div>
+        <div class="user-box">
+          <input type="url" name="songimage" required="" class="vo4" />
+          <label>Enter cover image URL</label>
+        </div>
+        <!-- <div class="user-box">
+        <input type="text" name="lyrics" required="">
+        <label>Enter song lyrics</label>
+      </div> -->
+        <div class="user-box">
+          <input
+            type="file"
+            name="file"
+            required=""
+            style="border: none; cursor: pointer"
+          />
+          <label style="margin-top: 5vh; color: #bdb8b8"
+            >Choose song file to upload</label
+          >
+        </div>
+        <input
+          type="submit"
+          value="CREATE"
+          style="
+            padding: 10px 30px;
+            border-radius: 500px;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(72, 221, 3);
+          "
+          id="createSong"
+        />
+      </form>
+      <a href="/home"
+        ><button
+          style="
+            padding: 10px 30px;
+            border-radius: 500px;
+            cursor: pointer;
+            position: relative;
+            top: 4.5vh;
+            left: 9vw;
+            border: none;
+          "
+          id="cancelbtn"
+        >
+          CANCEL
+        </button></a
+      >
+    </div>
+
+    <div class="banner"></div>
+
+    <!-- 
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Select a file:</label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <input type="text" name="songname" placeholder="song name">
+    <input type="text" name="songdesc" placeholder="song desc">
+    <input type="text" name="artist" placeholder="artist name">
+    <input type="url" name="songimage" placeholder="Enter URL of your image">
+
+    <input type="submit" value="Upload">
+  </form>  -->
+
+    <script>
+      if (window.matchMedia("(max-width: 400px)").matches) {
+        document.querySelector(".vo1").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo1").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo2").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo2").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo3").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo3").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo4").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo4").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+      }
+
+      if (
+        window.matchMedia("(min-width: 401px) and (max-width: 600px)").matches
+      ) {
+        document.querySelector(".vo1").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo1").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo2").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo2").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo3").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo3").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+
+        document.querySelector(".vo4").addEventListener("focus", function () {
+          document.querySelector(".create-box").style.marginTop = "30vh";
+          document.querySelector("#cancelbtn").style.marginTop = "-5.2vh";
+        });
+
+        document.querySelector(".vo4").addEventListener("blur", function () {
+          document.querySelector(".create-box").style.marginTop = "initial";
+          document.querySelector("#cancelbtn").style.marginTop = "initial";
+        });
+      }
+    </script>
+  </body>
+</html>
