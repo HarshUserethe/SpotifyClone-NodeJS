@@ -314,6 +314,10 @@
     left: 0 !important;
     margin-top: 3vh;
   }
+    #searchbtn:hover{
+    background-color: transparent !important;
+    color: #fff !important;
+  }
   #vss {
     left: 2vw;
     height: 15vw;
@@ -537,6 +541,10 @@
   }
   .cancelPage>h6{
     font-size: 4vw;
+  }
+    #searchbtn:hover{
+    background-color: transparent !important;
+    color: #fff !important;
   }
   #m-logo{
     position: absolute;
