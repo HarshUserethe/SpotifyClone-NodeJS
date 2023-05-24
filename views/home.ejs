@@ -436,7 +436,7 @@
       //GETING SONG DETAILS FROM AN API --->
       // <a href="/play/track/${audioTrack[index].filename}">
       $.get("/songsapi", function (data) {
-        data.reverse().forEach(function (item, index) {
+        data.forEach(function (item, index) {
           songSpace.innerHTML += `
       <div class="song">
         <div class="song-image"><img src="${data[index].songimage}" alt=""></div>
